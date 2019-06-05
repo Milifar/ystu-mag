@@ -1,1 +1,1 @@
-# ystu-mag
+# Project_1
