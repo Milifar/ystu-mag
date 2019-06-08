@@ -10,7 +10,6 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <body>
-    <div class="container">
         <%! private int ig = 0;%>
         <%! private int g = 0;%>
         <%! private List<Long> GtrOrd;%>
@@ -24,7 +23,7 @@
         <%guitarsView = Data.getInstance().getGuitars();%>
         <%g=guitarsView.size();%>
 
-        <h1>Список дипломов:</h1>
+        <h1>Список гитар:</h1>
         <% if (request.getAttribute("list") == null) {%>
             <% request.setAttribute("list", new ArrayList());%>
         <%}%>
@@ -35,21 +34,19 @@
         <% ((List)request.getAttribute("list")).add (Data.getInstance().getGuitarById(i)); %>
         <%}%>
 
-        <table class="table">
+        <table>
             <col width="150" valign="top">
             <col width="100" valign="top">
             <col width="100" valign="top">
             <col width="100" valign="top">
             <col width="100" valign="top">
-            <thead class="thead-inverse">
             <tr>
                 <th>Наименование</th>
-                <th>Оценка</th>
+                <th>Цвет</th>
                 <th>Цена</th>
                 <th>Тип</th>
                 <th>Купить</th>
             </tr>
-            </thead>
             <c:forEach items="${list}" var="item">
                 <% ++ig; %>
                 <tr>
@@ -83,14 +80,14 @@
         <% Long id = (Long) request.getSession().getAttribute("idUser"); %>
 
         <% GtrOrd = Data.getInstance().getOrderByCustomer(id).getGuitars(); %>
-        <table class="table">
+        <table>
             <col width="150" valign="top">
             <col width="100" valign="top">
             <col width="100" valign="top">
             <col width="100" valign="top">
             <tr>
                 <th>Наименование</th>
-                <th>Оценка</th>
+                <th>Цвет</th>
                 <th>Цена</th>
                 <th>Тип</th>
         <%for (int j=0; j<GtrOrd.size(); j++){ %>
@@ -111,6 +108,6 @@
         <% } %>
         </table>
         <%-- } --%>
-    </div>
+
     </body>
 </html>

@@ -114,14 +114,15 @@ public class Data {
 
     public void initData()
     {
-        employees.add(new Employee(1,"Alex","qwerty", 22));
-        customers.add(new Customer(1,"AlexS","1234", 22));
-        customers.add(new Customer(2,"ArtemK","0987", 23));
+        employees.add(new Employee(1,"Andre","pros", 22));
+        customers.add(new Customer(2,"Egor","111", 23));
+        customers.add(new Customer(2,"Andre","222", 22));
 
-        guitars.add(new Guitar(1,"Epiphone LP-100","Black",20000, GuitarType.Electric_guitar));
-        guitars.add(new Guitar(2,"Fender Stratocaster","White",60000, GuitarType.Electric_guitar));
-        guitars.add(new Guitar(3,"Fender Precision","Red",63000, GuitarType.Bass));
-        guitars.add(new Guitar(4,"Takamine","Sunburst",40000, GuitarType.Acoustic));
+
+        guitars.add(new Guitar(1,"Выпрыгивающий из тостера хлеб, как причина инфаркта у котиков","5",20000, GuitarType.Magistr));
+        guitars.add(new Guitar(2,"Методика приготовления идеального шашлыка","5",60000, GuitarType.Bakalavr));
+        guitars.add(new Guitar(3,"Влияние солнечной активности на менструальный цикл уток","5",63000, GuitarType.Doctor));
+        guitars.add(new Guitar(4,"Роль топора в произведениях Чехова","5",40000, GuitarType.Magistr));
 
        // orders.add(new Order(3,1,1, Arrays.asList(1l)));
     }
